@@ -2,13 +2,18 @@ import streamlit as st
 import pickle
 import numpy as np
 
+
+
+st.set_page_config(
+    page_title="Regression Basic Deployment",
+    page_icon=":rocket:"
+)
+
 st.title('Simple Regression Example : Model Deployment')
 
 if 'model' not in st.session_state:
     model = pickle.load(open('data/model.sav', 'rb'))
     st.session_state['model'] = model
-
-st.write(st.session_state)
 
 area_input = st.number_input('Insert Area of the House :house:')
 bedroom_input = st.number_input('Insert How many bedrooms in the House :bed:')
