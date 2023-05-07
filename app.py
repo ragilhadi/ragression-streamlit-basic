@@ -3,7 +3,6 @@ import pickle
 import numpy as np
 
 
-
 st.set_page_config(
     page_title="Regression Basic Deployment",
     page_icon=":rocket:"
